@@ -367,5 +367,14 @@
     "type": "Obligatorisk arbeid",
     "date": "2025-08-28",
     "timeSpent": 27
+  },
+  {
+    "subject": "DAT330",
+    "start": "14:20",
+    "end": "14:46",
+    "pause": 0,
+    "type": "Obligatorisk arbeid",
+    "date": "2025-08-29",
+    "timeSpent": 26
   }
 ]
