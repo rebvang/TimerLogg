@@ -349,5 +349,23 @@
     "type": "Forelesning",
     "date": "2025-08-28",
     "timeSpent": 33
+  },
+  {
+    "subject": "MOD300",
+    "start": "19:23",
+    "end": "19:54",
+    "pause": 3,
+    "type": "Obligatorisk arbeid",
+    "date": "2025-08-28",
+    "timeSpent": 28
+  },
+  {
+    "subject": "DAT330",
+    "start": "19:54",
+    "end": "20:21",
+    "pause": 0,
+    "type": "Obligatorisk arbeid",
+    "date": "2025-08-28",
+    "timeSpent": 27
   }
 ]
