@@ -520,5 +520,14 @@
     "type": "\u00d8vingstime",
     "date": "2025-09-04",
     "timeSpent": 105
+  },
+  {
+    "subject": "MAT300",
+    "start": "12:54",
+    "end": "13:56",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-07",
+    "timeSpent": 62
   }
 ]
