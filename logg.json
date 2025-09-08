@@ -538,5 +538,59 @@
     "type": "Obligatorisk arbeid",
     "date": "2025-09-07",
     "timeSpent": 16
+  },
+  {
+    "subject": "DAT320",
+    "start": "08:15",
+    "end": "10:04",
+    "pause": 0,
+    "type": "\u00d8vingstime",
+    "date": "2025-09-08",
+    "timeSpent": 109
+  },
+  {
+    "subject": "MAT300",
+    "start": "10:10",
+    "end": "11:00",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-08",
+    "timeSpent": 50
+  },
+  {
+    "subject": "MAT300",
+    "start": "11:21",
+    "end": "11:54",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-08",
+    "timeSpent": 33
+  },
+  {
+    "subject": "MAT300",
+    "start": "13:04",
+    "end": "14:02",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-08",
+    "timeSpent": 58
+  },
+  {
+    "subject": "MOD300",
+    "start": "14:15",
+    "end": "15:01",
+    "pause": 0,
+    "type": "Forelesning",
+    "date": "2025-09-08",
+    "timeSpent": 46
+  },
+  {
+    "subject": "MOD300",
+    "start": "15:05",
+    "end": "15:50",
+    "pause": 0,
+    "type": "Forelesning",
+    "date": "2025-09-08",
+    "timeSpent": 45
   }
 ]
