@@ -592,5 +592,23 @@
     "type": "Forelesning",
     "date": "2025-09-08",
     "timeSpent": 45
+  },
+  {
+    "subject": "MAT300",
+    "start": "09:01",
+    "end": "09:18",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-09",
+    "timeSpent": 17
+  },
+  {
+    "subject": "MAT300",
+    "start": "10:17",
+    "end": "11:30",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-09",
+    "timeSpent": 73
   }
 ]
