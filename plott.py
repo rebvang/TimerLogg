@@ -16,8 +16,8 @@ farger['STA100'] = "#0020ff"
 farger['ELE320'] = "orange"
 farger['WIN100'] = "#0000aa"
 
-liste = ["./script.sh"]
-subprocess.run(liste)
+# liste = ["./script.sh"]
+# subprocess.run(liste)
 
 MAT300 = mpatches.Patch(color=farger['MAT300'], label='MAT300')
 MOD300 = mpatches.Patch(color=farger['MOD300'],  label='MOD300')
