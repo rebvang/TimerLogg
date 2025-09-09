@@ -4,20 +4,32 @@ import datetime
 import sys
 import matplotlib.patches as mpatches
 import subprocess
+from mylib import all_false
 
-def all_false(n):
-    return (False for i in range(n))
+farger = dict()
+farger['MAT300'] = '#00aaff'
+farger['MOD300'] = '#ff0000'
+farger['DAT120'] = "#00cc00"
+farger['DAT320'] = "#7700aa"
+farger['DAT330'] = "#f7ff03"
+farger['STA100'] = "#0020ff"
+farger['ELE320'] = "orange"
+farger['WIN100'] = "#0000aa"
 
-MAT300 = mpatches.Patch(color='#00aaff', label='MAT300')
-MOD300 = mpatches.Patch(color='#ff0000',  label='MOD300')
-DAT120 = mpatches.Patch(color="#00cc00",  label='DAT120')
-DAT320 = mpatches.Patch(color="#7700aa",  label='DAT320')
-DAT330 = mpatches.Patch(color="#f7ff03",  label='DAT330')
-STA100 = mpatches.Patch(color="#0020ff",  label='STA100')
-ELE320 = mpatches.Patch(color="orange",  label='ELE320')
-WIN100 = mpatches.Patch(color="#0000aa",  label='WIN100')
+liste = ["./script.sh"]
+subprocess.run(liste)
 
-fagleg = ["mat300", "mod300", "dat120", "dat320", "dat330", "sta100", "ele320", "win100"]
+MAT300 = mpatches.Patch(color=farger['MAT300'], label='MAT300')
+MOD300 = mpatches.Patch(color=farger['MOD300'],  label='MOD300')
+DAT120 = mpatches.Patch(color=farger['DAT120'],  label='DAT120')
+DAT320 = mpatches.Patch(color=farger['DAT320'],  label='DAT320')
+DAT330 = mpatches.Patch(color=farger['DAT330'],  label='DAT330')
+STA100 = mpatches.Patch(color=farger['STA100'],  label='STA100')
+ELE320 = mpatches.Patch(color=farger['ELE320'],  label='ELE320')
+WIN100 = mpatches.Patch(color=farger['WIN100'],  label='WIN100')
+
+fagleg = [i.lower() for i, n in farger.items()]
+# fagleg = ["mat300", "mod300", "dat120", "dat320", "dat330", "sta100", "ele320", "win100"]
 leg = dict()
 for i in fagleg:
     leg[i] = False
@@ -48,33 +60,11 @@ for i in data:
         slutt = i['end'].split(":")
         slutt_idx = int(slutt[0])*60 + int(slutt[1]) - (start_kl * 60)
         fag = "k"
-        match i['subject']:
-            case "MOD300":
-                fag = "#ff0000"
-                leg["mod300"] = True
-            case "MAT300":
-                fag = "#00aaff"
-                leg["mat300"] = True
-            case "DAT120":
-                fag = "#00cc00"
-                leg["dat120"] = True
-            case "DAT320":
-                fag = "#7700aa"
-                leg["dat320"] = True
-            case "DAT330":
-                fag = "#f7ff03"
-                leg["dat330"] = True
-            case "STA100":
-                fag = "#0020ff"
-                leg["sta100"] = True
-            case "ELE320":
-                fag = "orange"
-                leg["ele320"] = True
-            case "WIN100":
-                fag = "#0000aa"
-                leg["win100"] = True
-            case _:
-                missing.add(i['subject'])
+        if i['subject'] in farger:
+            fag = farger[i['subject']]
+            leg[i['subject'].lower()] = True
+        else:
+            missing.add(i['subject'])
         for n in range(start_idx, slutt_idx):
             uke[idx][n] = fag
 
