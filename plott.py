@@ -18,15 +18,18 @@ farger['WIN100'] = "#0000aa"
 
 # liste = ["./script.sh"]
 # subprocess.run(liste)
+patches = dict()
+for fag, farge in farger.items():
+    patches[fag] = mpatches.Patch(color=farge, label=fag)
 
-MAT300 = mpatches.Patch(color=farger['MAT300'], label='MAT300')
-MOD300 = mpatches.Patch(color=farger['MOD300'],  label='MOD300')
-DAT120 = mpatches.Patch(color=farger['DAT120'],  label='DAT120')
-DAT320 = mpatches.Patch(color=farger['DAT320'],  label='DAT320')
-DAT330 = mpatches.Patch(color=farger['DAT330'],  label='DAT330')
-STA100 = mpatches.Patch(color=farger['STA100'],  label='STA100')
-ELE320 = mpatches.Patch(color=farger['ELE320'],  label='ELE320')
-WIN100 = mpatches.Patch(color=farger['WIN100'],  label='WIN100')
+# MAT300 = mpatches.Patch(color=farger['MAT300'], label='MAT300')
+# MOD300 = mpatches.Patch(color=farger['MOD300'],  label='MOD300')
+# DAT120 = mpatches.Patch(color=farger['DAT120'],  label='DAT120')
+# DAT320 = mpatches.Patch(color=farger['DAT320'],  label='DAT320')
+# DAT330 = mpatches.Patch(color=farger['DAT330'],  label='DAT330')
+# STA100 = mpatches.Patch(color=farger['STA100'],  label='STA100')
+# ELE320 = mpatches.Patch(color=farger['ELE320'],  label='ELE320')
+# WIN100 = mpatches.Patch(color=farger['WIN100'],  label='WIN100')
 
 fagleg = [i.lower() for i, n in farger.items()]
 # fagleg = ["mat300", "mod300", "dat120", "dat320", "dat330", "sta100", "ele320", "win100"]
@@ -68,7 +71,7 @@ for i in data:
         for n in range(start_idx, slutt_idx):
             uke[idx][n] = fag
 
-legend = [globals()[n.upper()] for n, v in leg.items() if v]
+legend = [patches[n.upper()] for n, v in leg.items() if v]
 
 
 # Just plot a line for each minute?? y = time. x + dx = day.
