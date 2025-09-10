@@ -4,8 +4,12 @@ import matplotlib.pyplot as plt
 with open("TimerLogg/logg.json", "r", encoding="utf-8") as fil:
     data = json.load(fil)
 
-x = [i for i in range(len(data))]
-y = [i['pause'] for i in data]
+x = []
+y = []
+
+for i, d in enumerate(data):
+    x.append(i)
+    y.append(d['pause'])
 
 plt.figure()
 
