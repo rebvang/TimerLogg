@@ -1,7 +1,7 @@
 import json
 import matplotlib.pyplot as plt
 
-with open("TimerLogg/logg.json", "r", encoding="utf-8") as fil:
+with open("logg.json", "r", encoding="utf-8") as fil:
     data = json.load(fil)
 
 x = []
