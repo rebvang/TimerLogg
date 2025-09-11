@@ -664,5 +664,77 @@
     "type": "\u00d8vingstime",
     "date": "2025-09-10",
     "timeSpent": 113
+  },
+  {
+    "subject": "DAT120",
+    "start": "07:57",
+    "end": "08:02",
+    "pause": 0,
+    "type": "Studass Forberedelse",
+    "date": "2025-09-11",
+    "timeSpent": 5
+  },
+  {
+    "subject": "DAT120",
+    "start": "08:15",
+    "end": "10:00",
+    "pause": 0,
+    "type": "\u00d8vingstime",
+    "date": "2025-09-11",
+    "timeSpent": 105
+  },
+  {
+    "subject": "MAT300",
+    "start": "10:16",
+    "end": "10:54",
+    "pause": 0,
+    "type": "Alene",
+    "date": "2025-09-11",
+    "timeSpent": 38
+  },
+  {
+    "subject": "MAT300",
+    "start": "10:57",
+    "end": "11:35",
+    "pause": 0,
+    "type": "Alene",
+    "date": "2025-09-11",
+    "timeSpent": 38
+  },
+  {
+    "subject": "MAT300",
+    "start": "12:37",
+    "end": "13:10",
+    "pause": 0,
+    "type": "Alene",
+    "date": "2025-09-11",
+    "timeSpent": 33
+  },
+  {
+    "subject": "MAT300",
+    "start": "13:36",
+    "end": "13:54",
+    "pause": 0,
+    "type": "Alene",
+    "date": "2025-09-11",
+    "timeSpent": 18
+  },
+  {
+    "subject": "MOD300",
+    "start": "14:17",
+    "end": "15:04",
+    "pause": 0,
+    "type": "Forelesning",
+    "date": "2025-09-11",
+    "timeSpent": 47
+  },
+  {
+    "subject": "MOD300",
+    "start": "15:20",
+    "end": "15:55",
+    "pause": 0,
+    "type": "Forelesning",
+    "date": "2025-09-11",
+    "timeSpent": 35
   }
 ]
