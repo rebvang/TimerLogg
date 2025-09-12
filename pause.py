@@ -11,6 +11,8 @@ for i, d in enumerate(data):
     x.append(i)
     y.append(d['pause'])
 
+print(len(x))
+
 plt.figure()
 
 plt.bar(x, y)
