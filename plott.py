@@ -4,7 +4,6 @@ import datetime
 import sys
 import matplotlib.patches as mpatches
 import subprocess
-from mylib import all_false
 
 farger = dict()
 farger['MAT300'] = '#00aaff'
@@ -15,6 +14,7 @@ farger['DAT330'] = "#f7ff03"
 farger['STA100'] = "#0020ff"
 farger['ELE320'] = "orange"
 farger['WIN100'] = "#0000aa"
+farger['ELE210'] = "#aa00ff"
 
 # liste = ["./script.sh"]
 # subprocess.run(liste)
