@@ -754,5 +754,14 @@
     "type": "Alene",
     "date": "2025-09-12",
     "timeSpent": 36
+  },
+  {
+    "subject": "DAT120",
+    "start": "10:01",
+    "end": "10:09",
+    "pause": 0,
+    "type": "Studass Forberedelse",
+    "date": "2025-09-12",
+    "timeSpent": 8
   }
 ]
