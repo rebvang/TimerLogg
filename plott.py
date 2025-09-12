@@ -1,15 +1,15 @@
 import json
 import matplotlib.pyplot as plt
 import datetime
-import sys
+
 import matplotlib.patches as mpatches
 import subprocess
+from mylib import all_false
 
 with open("fag_farger.json", "r", encoding="utf-8") as fil:
     farger = json.load(fil)
 
-# liste = ["./script.sh"]
-# subprocess.run(liste)
+
 patches = dict()
 for fag, farge in farger.items():
     patches[fag] = mpatches.Patch(color=farge, label=fag)
@@ -26,64 +26,67 @@ for fag, farge in farger.items():
 fagleg = [i.lower() for i, n in farger.items()]
 # fagleg = ["mat300", "mod300", "dat120", "dat320", "dat330", "sta100", "ele320", "win100"]
 leg = dict()
-for i in fagleg:
-    leg[i] = False
+
 
 with open("logg.json", "r") as fil:
     data = json.load(fil)
 
-uke_nr = int(sys.argv[1])
-ukedager = [
-    (datetime.date.fromisocalendar(2025, uke_nr, d).isoformat())
-    for d in range(1, 8)  # ISO weekday: Monday=1 … Sunday=7
-]
 
 start_kl = 4
 slutt_kl = start_kl + 20
 
-uke = [["" for _ in range((slutt_kl-start_kl)*60)] for _ in range(7)]
+
 # dag = ["" for _ in range(6*60)]
 
 missing = set()
 
-for i in data:
-    if i['date'] in ukedager:
-        d = datetime.date.fromisoformat(i['date'])
-        idx = d.weekday()
-        start = i['start'].split(":")
-        start_idx = int(start[0])*60 + int(start[1]) - (start_kl * 60)
-        slutt = i['end'].split(":")
-        slutt_idx = int(slutt[0])*60 + int(slutt[1]) - (start_kl * 60)
-        fag = "k"
-        if i['subject'] in farger:
-            fag = farger[i['subject']]
-            leg[i['subject'].lower()] = True
-        else:
-            missing.add(i['subject'])
-        for n in range(start_idx, slutt_idx):
-            uke[idx][n] = fag
+for uke_nr in [i for i in range(32, 38)]:
+    for i in fagleg:
+        leg[i] = False
+    uke = [["" for _ in range((slutt_kl-start_kl)*60)] for _ in range(7)]
+    ukedager = [
+        (datetime.date.fromisocalendar(2025, uke_nr, d).isoformat())
+        for d in range(1, 8)  # ISO weekday: Monday=1 … Sunday=7
+    ]
 
-legend = [patches[n.upper()] for n, v in leg.items() if v]
+    for i in data:
+        if i['date'] in ukedager:
+            d = datetime.date.fromisoformat(i['date'])
+            idx = d.weekday()
+            start = i['start'].split(":")
+            start_idx = int(start[0])*60 + int(start[1]) - (start_kl * 60)
+            slutt = i['end'].split(":")
+            slutt_idx = int(slutt[0])*60 + int(slutt[1]) - (start_kl * 60)
+            fag = "k"
+            if i['subject'] in farger:
+                fag = farger[i['subject']]
+                leg[i['subject'].lower()] = True
+            else:
+                missing.add(i['subject'])
+            for n in range(start_idx, slutt_idx):
+                uke[idx][n] = fag
+
+    legend = [patches[n.upper()] for n, v in leg.items() if v]
 
 
-# Just plot a line for each minute?? y = time. x + dx = day.
+    # Just plot a line for each minute?? y = time. x + dx = day.
 
-plt.figure(figsize=(10, 7))
-plt.ylim(slutt_kl, start_kl)
-plt.xlim(0, 8)
-plt.grid()
+    plt.figure(figsize=(10, 7))
+    plt.ylim(slutt_kl, start_kl)
+    plt.xlim(0, 8)
+    plt.grid()
 
-for i, dag in enumerate(uke):
-    for idx, fag in enumerate(dag):
-        if fag != "":
-            y = start_kl + idx*(1/60)
-            x1, x2 = i+0.525, i+1.4975 # Give some space between so adjacent days don't overlap
-            plt.plot([x1, x2], [y, y], fag)
+    for i, dag in enumerate(uke):
+        for idx, fag in enumerate(dag):
+            if fag != "":
+                y = start_kl + idx*(1/60)
+                x1, x2 = i+0.525, i+1.4975 # Give some space between so adjacent days don't overlap
+                plt.plot([x1, x2], [y, y], fag)
 
-plt.title(f"Uke {uke_nr}: {ukedager[0]} — {ukedager[-1]}")
-plt.yticks([i for i in range(start_kl, slutt_kl+1)])
-plt.xticks([i for i in range(9)], ["", "Man", "Tir", "Ons", "Tor", "Fre", "Lør", "Søn", ""])
-plt.legend(handles=legend)
-plt.show()
+    plt.title(f"Uke {uke_nr}: {ukedager[0]} — {ukedager[-1]}")
+    plt.yticks([i for i in range(start_kl, slutt_kl+1)])
+    plt.xticks([i for i in range(9)], ["", "Man", "Tir", "Ons", "Tor", "Fre", "Lør", "Søn", ""])
+    plt.legend(handles=legend)
+    plt.show()
 
-print(missing)
+    print(missing)
