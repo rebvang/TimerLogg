@@ -745,5 +745,14 @@
     "type": "Alene",
     "date": "2025-09-12",
     "timeSpent": 60
+  },
+  {
+    "subject": "MAT300",
+    "start": "09:24",
+    "end": "10:00",
+    "pause": 0,
+    "type": "Alene",
+    "date": "2025-09-12",
+    "timeSpent": 36
   }
 ]
