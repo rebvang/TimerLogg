@@ -4,7 +4,6 @@ import datetime
 import sys
 import matplotlib.patches as mpatches
 import subprocess
-from mylib import all_false
 
 with open("fag_farger.json", "r", encoding="utf-8") as fil:
     farger = json.load(fil)
