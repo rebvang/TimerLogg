@@ -5,16 +5,8 @@ import sys
 import matplotlib.patches as mpatches
 import subprocess
 
-farger = dict()
-farger['MAT300'] = '#00aaff'
-farger['MOD300'] = '#ff0000'
-farger['DAT120'] = "#00cc00"
-farger['DAT320'] = "#7700aa"
-farger['DAT330'] = "#f7ff03"
-farger['STA100'] = "#0020ff"
-farger['ELE320'] = "orange"
-farger['WIN100'] = "#0000aa"
-farger['ELE210'] = "#aa00ff"
+with open("fag_farger.json", "r", encoding="utf-8") as fil:
+    farger = json.load(fil)
 
 # liste = ["./script.sh"]
 # subprocess.run(liste)
