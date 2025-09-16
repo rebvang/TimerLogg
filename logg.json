@@ -781,5 +781,86 @@
     "type": "Video",
     "date": "2025-09-12",
     "timeSpent": 58
+  },
+  {
+    "subject": "DAT320",
+    "start": "08:01",
+    "end": "08:04",
+    "pause": 0,
+    "type": "\u00d8vingstime",
+    "date": "2025-09-15",
+    "timeSpent": 3
+  },
+  {
+    "subject": "DAT320",
+    "start": "08:15",
+    "end": "10:00",
+    "pause": 0,
+    "type": "\u00d8vingstime",
+    "date": "2025-09-15",
+    "timeSpent": 105
+  },
+  {
+    "subject": "ELE210",
+    "start": "10:53",
+    "end": "11:15",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-15",
+    "timeSpent": 22
+  },
+  {
+    "subject": "ELE210",
+    "start": "11:35",
+    "end": "11:49",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-15",
+    "timeSpent": 14
+  },
+  {
+    "subject": "ELE210",
+    "start": "11:52",
+    "end": "12:03",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-15",
+    "timeSpent": 11
+  },
+  {
+    "subject": "ELE210",
+    "start": "13:04",
+    "end": "13:33",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-15",
+    "timeSpent": 29
+  },
+  {
+    "subject": "MOD300",
+    "start": "14:15",
+    "end": "15:00",
+    "pause": 0,
+    "type": "Forelesning",
+    "date": "2025-09-15",
+    "timeSpent": 45
+  },
+  {
+    "subject": "MOD300",
+    "start": "15:12",
+    "end": "16:00",
+    "pause": 0,
+    "type": "Forelesning",
+    "date": "2025-09-15",
+    "timeSpent": 48
+  },
+  {
+    "subject": "DAT330",
+    "start": "10:02",
+    "end": "10:22",
+    "pause": 0,
+    "type": "M\u00f8te",
+    "date": "2025-09-15",
+    "timeSpent": 20
   }
 ]
