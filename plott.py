@@ -24,8 +24,15 @@ with open("logg.json", "r") as fil:
 start_kl = 4
 slutt_kl = start_kl + 20
 
-start_uke = int(sys.argv[1])
-slutt_uke = int(sys.argv[2]) + 1
+if len(sys.argv) > 1 and sys.argv[1] != '':
+    start_uke = int(sys.argv[1])
+    if len(sys.argv) > 2:
+        slutt_uke = int(sys.argv[2]) + 1
+    else:
+        slutt_uke = start_uke + 1
+else:
+    start_uke = 32
+    slutt_uke = 45
 
 
 missing = set()
