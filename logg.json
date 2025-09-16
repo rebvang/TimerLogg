@@ -862,5 +862,50 @@
     "type": "M\u00f8te",
     "date": "2025-09-15",
     "timeSpent": 20
+  },
+  {
+    "subject": "ELE210",
+    "start": "10:11",
+    "end": "10:22",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-16",
+    "timeSpent": 11
+  },
+  {
+    "subject": "DAT330",
+    "start": "10:22",
+    "end": "10:24",
+    "pause": 0,
+    "type": "M\u00f8te",
+    "date": "2025-09-16",
+    "timeSpent": 2
+  },
+  {
+    "subject": "ELE210",
+    "start": "10:24",
+    "end": "10:32",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-16",
+    "timeSpent": 8
+  },
+  {
+    "subject": "ELE210",
+    "start": "10:34",
+    "end": "10:54",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-16",
+    "timeSpent": 20
+  },
+  {
+    "subject": "ELE210",
+    "start": "10:55",
+    "end": "11:11",
+    "pause": 0,
+    "type": "Video",
+    "date": "2025-09-16",
+    "timeSpent": 16
   }
 ]
