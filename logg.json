@@ -112,7 +112,7 @@
     "start": "15:00",
     "end": "15:25",
     "pause": 0,
-    "type": "Møte",
+    "type": "M\u00f8te",
     "date": "2025-08-19",
     "timeSpent": 25
   },
@@ -907,5 +907,50 @@
     "type": "Video",
     "date": "2025-09-16",
     "timeSpent": 16
+  },
+  {
+    "subject": "MAT300",
+    "start": "12:15",
+    "end": "13:03",
+    "pause": 0,
+    "type": "Forelesning",
+    "date": "2025-09-17",
+    "timeSpent": 48
+  },
+  {
+    "subject": "MAT300",
+    "start": "13:17",
+    "end": "13:56",
+    "pause": 0,
+    "type": "Forelesning",
+    "date": "2025-09-17",
+    "timeSpent": 39
+  },
+  {
+    "subject": "DAT320",
+    "start": "14:03",
+    "end": "14:05",
+    "pause": 0,
+    "type": "Studass Forberedelse",
+    "date": "2025-09-17",
+    "timeSpent": 2
+  },
+  {
+    "subject": "DAT320",
+    "start": "14:05",
+    "end": "15:57",
+    "pause": 0,
+    "type": "\u00d8vingstime",
+    "date": "2025-09-17",
+    "timeSpent": 112
+  },
+  {
+    "subject": "DAT120",
+    "start": "16:04",
+    "end": "18:04",
+    "pause": 0,
+    "type": "\u00d8vingstime",
+    "date": "2025-09-17",
+    "timeSpent": 120
   }
 ]
