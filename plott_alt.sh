@@ -9,4 +9,5 @@
     python3 lengde_blokk.py
     python3 integrert.py
     python3 total_filtrert.py
+    python3 integrert.py 0.5
 )

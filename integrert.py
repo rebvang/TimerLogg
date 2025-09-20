@@ -2,6 +2,14 @@ import json
 from datetime import datetime, date, timedelta
 import other_types as ot
 from gen_funk import plott_x_y, add_datetime_and_sort
+import filterf
+import sys
+
+if len(sys.argv) > 1:
+    filtrer = True
+    alfa = float(sys.argv[1])
+else:
+    filtrer = False
 
 
 
@@ -27,7 +35,7 @@ def make_y_list(dictionary, all_dates):
         y.append(sumtid)
     return y
 
-def main(data, dict_to_use, typ):
+def main(data, dict_to_use, typ, filtrer=False, alfa=0.5):
     for thing_to_plot, farge in dict_to_use.items():
         if isinstance(thing_to_plot, (list, tuple)):
             nydata = sort_and_add_datetime(data, thing_to_plot, typ)
@@ -46,14 +54,15 @@ def main(data, dict_to_use, typ):
         dictionary[date1] = sumtid
 
         dates = [date.fromisoformat(i) for i, _ in dictionary.items()]
-        min_date = min(dates)
-        max_date = max(dates)
+        min_date = date(2025, 8, 5)
+        max_date = min(datetime.now().date(), date(2025, 12, 24))
 
         all_dates = get_all_dates(min_date, max_date)
 
         # x = all_dates
         y = make_y_list(dictionary, all_dates)
-
+        if filtrer:
+            y = filterf.IIR(y, alfa)
         
         tittel = "Timer integrert over tid — "
         if isinstance(thing_to_plot, (list, tuple)):
@@ -63,6 +72,8 @@ def main(data, dict_to_use, typ):
                     tittel += " + "
         else:
             tittel += thing_to_plot
+        if filtrer:
+            tittel += f" — IIR-filtrert m/ alfa = {alfa}"
         plott_x_y(all_dates, y, farge, tittel)
 
 with open("logg.json", "r", encoding="utf-8") as fil:
@@ -71,15 +82,24 @@ with open("logg.json", "r", encoding="utf-8") as fil:
 with open("fag_farger.json", "r", encoding="utf-8") as fil:
     farger = json.load(fil)
 
-main(data, farger, "subject")
+if filtrer:
+    main(data, farger, "subject", True, alfa)
+else:
+    main(data, farger, "subject")
 
 with open("type_farger.json", "r", encoding="utf-8") as fil:
     farger = json.load(fil)
 
-main(data, farger, "type")
+if filtrer:
+    main(data, farger, "type", True, alfa)
+else:
+    main(data, farger, "type")
 
 farger = ot.main()
 
-main(data, farger, "type")
+if filtrer:
+    main(data, farger, "type")
+else:
+    main(data, farger, "type")
 
 
