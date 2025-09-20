@@ -952,5 +952,32 @@
     "type": "\u00d8vingstime",
     "date": "2025-09-17",
     "timeSpent": 120
+  },
+  {
+    "subject": "DAT120",
+    "start": "08:15",
+    "end": "10:00",
+    "pause": 0,
+    "type": "\u00d8vingstime",
+    "date": "2025-09-18",
+    "timeSpent": 105
+  },
+  {
+    "subject": "MOD300",
+    "start": "14:14",
+    "end": "15:03",
+    "pause": 0,
+    "type": "Forelesning",
+    "date": "2025-09-18",
+    "timeSpent": 49
+  },
+  {
+    "subject": "MOD300",
+    "start": "15:18",
+    "end": "16:03",
+    "pause": 0,
+    "type": "Forelesning",
+    "date": "2025-09-18",
+    "timeSpent": 45
   }
 ]
