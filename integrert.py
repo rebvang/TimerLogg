@@ -11,8 +11,6 @@ if len(sys.argv) > 1:
 else:
     filtrer = False
 
-
-
 def sort_and_add_datetime(data, thing_to_plot, typ):
     nydata = [i for i in data if i[typ] in thing_to_plot]
     return add_datetime_and_sort(nydata)
@@ -98,7 +96,7 @@ else:
 farger = ot.main()
 
 if filtrer:
-    main(data, farger, "type")
+    main(data, farger, "type", True, alfa)
 else:
     main(data, farger, "type")
 

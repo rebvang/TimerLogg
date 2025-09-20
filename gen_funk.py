@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime, date
 
 def plott_x_y(x, y, farge, title):
-    plt.figure()
+    plt.figure(figsize=(8, 5))
     plt.grid()
     plt.plot(x, y, "o-", color=farge)
     if isinstance(x[0], (datetime, str, date)):
